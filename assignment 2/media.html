@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
+    <p>A creative individual passionate about technology and impactful projects.</p>
+  </header>
+  <main>
+    <!-- Picture Element -->
+    <section>
+      <h2>Responsive Images</h2>
+      <p>Here's an adaptable image that fits any screen size:</p>
+      <picture>
+        <!-- Image for Mobile -->
+        <source srcset="" media="(max-width: 600px)">
+        <!-- Image for Tablet -->
+        <source srcset="tablet-image.jpg" media="(max-width: 1024px)">
+        <!-- Default Image for Larger Screens -->
+        <img src="" alt="Responsive About Me Image">
+      </picture>
+    </section>
+
+    <!-- Video Element -->
+    <section>
+      <h2>My Story in Motion</h2>
+      <p>Watch this short video to learn more about my journey:</p>
+      <video controls>
+        <source src="/Assets/video .mp4" type="video/mp4">
+        <source src="story-video.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Audio Element -->
+    <section>
+      <h2>Audio Introduction</h2>
+      <p>Listen to my voice message:</p>
+      <audio controls>
+        <source src="intro-audio.mp3" type="audio/mpeg">
+        <source src="intro-audio.ogg" type="audio/ogg">
+        Your browser does not support the audio tag.
+      </audio>
+    </section>
+  </main>
+</body>
+</html>

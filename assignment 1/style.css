@@ -1,0 +1,260 @@
+/* ========== Css Reset. Author: Josh W. Comeau ======  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ===================== Styles ==================== */
+:root {
+  --primary-color: #4f46e5;
+  --text-color: #1f2937;
+  --spacing: clamp(1rem, 5vw, 2rem);
+}
+
+body {
+  line-height: 1.5;
+  color: var(--text-color);
+  background: linear-gradient(135deg, #f6f7ff 0%, #e9eeff 100%);
+  min-height: 100vh;
+  font-family: "Josefin sans", sans-serif;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(1rem, 5vw, 2rem);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  background: linear-gradient(120deg, #4f46e511, #818cf833, #c084fc22);
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+nav {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+  background: var(--primary-color);
+  color: white;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: var(--primary-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+section {
+  background: #ffffff;
+  padding: calc(var(--spacing) * 1.5);
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(79, 70, 229, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+  text-align: center;
+}
+
+.profile-section p {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+.profile-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-color), #c084fc);
+    z-index: -1;
+    opacity: 0.2;
+  }
+}
+
+img {
+  border-radius: 50%;
+  max-width: 250px;
+  height: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid white;
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #4b5563;
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.back-to-top {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-radius: 0 2rem 0 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 1rem;
+  }
+
+  img {
+    max-width: 200px;
+  }
+
+  header {
+    padding: 1rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+}
